@@ -728,6 +728,68 @@
             margin-top: 30px;
         }
 
+        /* AUTH FORM STYLES */
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 40px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .auth-input {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            background: #f9f9f9;
+        }
+
+        .auth-input:focus {
+            outline: none;
+            border-color: var(--royal-gold);
+            background: white;
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+
+        .auth-btn {
+            background: linear-gradient(135deg, var(--royal-gold), var(--soft-gold));
+            color: var(--royal-purple);
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .auth-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .switch-auth {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            cursor: pointer;
+            color: var(--royal-purple);
+            text-decoration: underline;
+        }
+
+        .error-msg {
+            color: #d9534f;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 20px;
+        }
+
         /* PRODUCT RECOMMENDATION MODAL */
         .product-modal {
             display: none;
@@ -1298,6 +1360,42 @@
             margin-top: 20px;
         }
 
+        /* WISHLIST BUTTON */
+        .wishlist-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-btn:hover {
+            transform: scale(1.1);
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .wishlist-btn i {
+            color: #ccc;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .wishlist-btn.active i {
+            color: #e74c3c;
+        }
+
+
         .social-icon {
             width: 45px;
             height: 45px;
@@ -1589,8 +1687,7 @@
                 <div class="category-grid">
                     <div class="category-card">
                         <div class="category-icon">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\normal skin.jpeg"
-                                alt="Normal Skin">
+                            <img src="images/normal skin.jpeg" alt="Normal Skin">
                         </div>
                         <h3>Normal Skin</h3>
                         <p>Maintain your natural royal glow with our nourishing formulas.</p>
@@ -1598,8 +1695,7 @@
 
                     <div class="category-card">
                         <div class="category-icon">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\dry skin.jpeg"
-                                alt="Dry Skin">
+                            <img src="images/dry skin.jpeg" alt="Dry Skin">
                         </div>
                         <h3>Dry Skin</h3>
                         <p>Royal hydration with our moisture-locking formulations for dewy skin.</p>
@@ -1607,8 +1703,7 @@
 
                     <div class="category-card">
                         <div class="category-icon">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\oily skin.jpeg"
-                                alt="Oily Skin">
+                            <img src="images/oily skin.jpeg" alt="Oily Skin">
                         </div>
                         <h3>Oily Skin</h3>
                         <p>Lightweight, non-comedogenic products for a matte finish.</p>
@@ -1616,8 +1711,7 @@
 
                     <div class="category-card">
                         <div class="category-icon">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\sensitive skin.jpeg"
-                                alt="Sensitive Skin">
+                            <img src="images/sensitive skin.jpeg" alt="Sensitive Skin">
                         </div>
                         <h3>Sensitive Skin</h3>
                         <p>Gentle, fragrance-free formulas that soothe and protect.</p>
@@ -1689,8 +1783,7 @@
                 <div class="product-grid">
                     <div class="product-card new">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\cleanser(blue).jpeg"
-                                alt="Face Wash">
+                            <img src="images/cleanser(blue).jpeg" alt="Face Wash">
                         </div>
                         <div class="product-info">
                             <h3>Face Washes</h3>
@@ -1701,7 +1794,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\toner3.png" alt="Toner">
+                            <img src="images/toner3.png" alt="Toner">
                         </div>
                         <div class="product-info">
                             <h3>Toners</h3>
@@ -1723,8 +1816,7 @@
 
                     <div class="product-card featured">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\moisturizer.jpeg"
-                                alt="Moisturizers">
+                            <img src="images/moisturizer.jpeg" alt="Moisturizers">
                         </div>
                         <div class="product-info">
                             <h3>Moisturizers</h3>
@@ -1735,8 +1827,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\sunscreen (2).png"
-                                alt="Sunscreen">
+                            <img src="images/sunscreen (2).png" alt="Sunscreen">
                         </div>
                         <div class="product-info">
                             <h3>Sunscreen</h3>
@@ -1747,8 +1838,7 @@
 
                     <div class="product-card bestseller">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\anti-aging serum.png"
-                                alt="Anti-Aging">
+                            <img src="images/anti-aging serum.png" alt="Anti-Aging">
                         </div>
                         <div class="product-info">
                             <h3>Anti-Aging</h3>
@@ -1759,8 +1849,7 @@
 
                     <div class="product-card new">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\acne defence patches.jpeg"
-                                alt="Acne Patches">
+                            <img src="images/acne defence patches.jpeg" alt="Acne Patches">
                         </div>
                         <div class="product-info">
                             <h3>Acne Patches</h3>
@@ -1772,8 +1861,7 @@
                     <!-- NEW PRODUCTS ADDED -->
                     <div class="product-card featured">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\brightening cream.jpeg"
-                                alt="Brightening Creams">
+                            <img src="images/brightening cream.jpeg" alt="Brightening Creams">
                         </div>
                         <div class="product-info">
                             <h3>Brightening Creams</h3>
@@ -1784,8 +1872,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\eye cream.jpeg"
-                                alt="Eye Creams">
+                            <img src="images/eye cream.jpeg" alt="Eye Creams">
                         </div>
                         <div class="product-info">
                             <h3>Eye Creams</h3>
@@ -1797,8 +1884,7 @@
                     <!-- ADDITIONAL PRODUCTS -->
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\face oil.jpeg"
-                                alt="Face Oils">
+                            <img src="images/face oil.jpeg" alt="Face Oils">
                         </div>
                         <div class="product-info">
                             <h3>Face Oils</h3>
@@ -1809,8 +1895,7 @@
 
                     <div class="product-card new">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\face mask.jpeg"
-                                alt="Face Masks">
+                            <img src="images/face mask.jpeg" alt="Face Masks">
                         </div>
                         <div class="product-info">
                             <h3>Face Masks</h3>
@@ -1821,8 +1906,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\lipcare.jpeg"
-                                alt="Lip Care">
+                            <img src="images/lipcare.jpeg" alt="Lip Care">
                         </div>
                         <div class="product-info">
                             <h3>Lip Care</h3>
@@ -1856,8 +1940,7 @@
 
                     <div class="product-card bestseller">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\night cream (2).png"
-                                alt="Night Cream">
+                            <img src="images/night cream (2).png" alt="Night Cream">
                         </div>
                         <div class="product-info">
                             <h3>Night Cream</h3>
@@ -1868,8 +1951,7 @@
 
                     <div class="product-card bestseller">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\cleanser(red).jpeg"
-                                alt="Cleanser">
+                            <img src="images/cleanser(red).jpeg" alt="Cleanser">
                         </div>
                         <div class="product-info">
                             <h3>Cleanser</h3>
@@ -1880,8 +1962,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\hydration mask.jpeg"
-                                alt="Hydration Mask">
+                            <img src="images/hydration mask.jpeg" alt="Hydration Mask">
                         </div>
                         <div class="product-info">
                             <h3>Hydration Mask</h3>
@@ -1893,8 +1974,7 @@
                     <!-- NEW BESTSELLER ADDED -->
                     <div class="product-card bestseller">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\vit c serum.jpeg"
-                                alt="Vitamin C Serum">
+                            <img src="images/vit c serum.jpeg" alt="Vitamin C Serum">
                         </div>
                         <div class="product-info">
                             <h3>Vitamin C Serum</h3>
@@ -1917,8 +1997,7 @@
 
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="C:\Users\VINDHYA\OneDrive\Desktop\training\ILUNARA\images\hylauronic acid.jpeg"
-                                alt="Hyaluronic Acid">
+                            <img src="images/hylauronic acid.jpeg" alt="Hyaluronic Acid">
                         </div>
                         <div class="product-info">
                             <h3>Hyaluronic Acid</h3>
@@ -1964,13 +2043,7 @@
                             <p>Save your favorite elegant products</p>
                         </div>
 
-                        <div class="category-card">
-                            <div class="category-icon">
-                                <i class="fas fa-cog"></i>
-                            </div>
-                            <h3>Settings</h3>
-                            <p>Customize your elegant experience</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -3913,8 +3986,25 @@
                     hasProducts = true;
 
                     // Generate HTML for this category's products
-                    const categoryProductsHTML = products.map(product => `
-                        <div class="enhanced-product-card" style="margin-bottom: 20px;">
+                    const categoryProductsHTML = products.map(product => {
+                        const isLiked = isWishlisted(product.name);
+                        // Pick a placeholder image based on category if possible, or generic
+                        const placeholderImg = `images/${categoryKey === 'antiAging' ? 'anti-aging serum.png' :
+                            categoryKey === 'acnePatches' ? 'acne defence patches.jpeg' :
+                                categoryKey === 'eyecream' ? 'eye cream.jpeg' :
+                                    categoryKey === 'brightening' ? 'brightening cream.jpeg' :
+                                        categoryKey === 'facewash' ? 'cleanser(blue).jpeg' :
+                                            categoryKey === 'toner' ? 'toner3.png' :
+                                                categoryKey === 'moisturizer' ? 'moisturizer.jpeg' :
+                                                    categoryKey === 'sunscreen' ? 'sunscreen (2).png' : 'serum.png'}`;
+
+                        return `
+                        <div class="enhanced-product-card" style="margin-bottom: 20px; position: relative;">
+                             <button class="wishlist-btn ${isLiked ? 'active' : ''}" 
+                                     onclick="toggleWishlist(event, '${product.name.replace(/'/g, "\\'")}', '${product.price}', '${placeholderImg}', '${product.type}')"
+                                     style="top: 10px; right: 10px; background: rgba(255,255,255,0.9); border: 1px solid #eee;">
+                                <i class="${isLiked ? 'fas' : 'far'} fa-heart"></i>
+                            </button>
                             <div class="product-card-header">
                                 <h3>${product.name}</h3>
                                 <span class="product-type">${product.type}</span>
@@ -3934,7 +4024,7 @@
                                 `}
                             </div>
                         </div>
-                    `).join('');
+                    `}).join('');
 
                     // Add Category Header and Grid
                     fullContentHTML += `
@@ -3969,8 +4059,157 @@
             document.body.style.overflow = 'hidden';
         }
 
+        // ============ AUTH FUNCTIONS ============
+        let currentUser = null;
+        const API_URL = 'http://localhost:3000/api';
+
+        async function checkLogin() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                try {
+                    const res = await fetch(`${API_URL}/user/profile`, {
+                        headers: { 'x-access-token': token }
+                    });
+                    const data = await res.json();
+                    if (res.ok) {
+                        currentUser = data;
+                        console.log("Logged in as:", currentUser.name);
+                        // Optional: Update UI to show name
+                    } else {
+                        // Token invalid/expired
+                        localStorage.removeItem('token');
+                        currentUser = null;
+                    }
+                } catch (e) {
+                    console.error("Auth Error:", e);
+                    // Don't log out immediately on network error, but effectively offline
+                }
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            currentUser = null;
+            closeProductModal();
+            alert('Safely logged out from the royal court.');
+            window.location.reload();
+        }
+
+        function renderLoginForm() {
+            const modalBody = document.getElementById('productModalBody');
+            modalBody.innerHTML = `
+                <div class="auth-form">
+                    <div style="text-align: center; margin-bottom: 20px; color: var(--royal-purple);">
+                        <i class="fas fa-crown" style="font-size: 40px; margin-bottom: 10px;"></i>
+                        <h3 style="font-family: 'Cinzel', serif;">Royal Access</h3>
+                        <p style="color: #666; font-size: 14px;">Enter your credentials to proceed</p>
+                    </div>
+                    <input type="email" id="loginEmail" class="auth-input" placeholder="Royal Email Address">
+                    <input type="password" id="loginPassword" class="auth-input" placeholder="Password">
+                    <button class="auth-btn" onclick="handleLogin()">Enter Palace</button>
+                    <div id="loginError" class="error-msg"></div>
+                    <div class="switch-auth" onclick="document.getElementById('modalTitle').textContent='Royal Registration'; renderRegisterForm()">New to the court? Join here</div>
+                </div>
+            `;
+        }
+
+        function renderRegisterForm() {
+            const modalBody = document.getElementById('productModalBody');
+            modalBody.innerHTML = `
+                <div class="auth-form">
+                    <div style="text-align: center; margin-bottom: 20px; color: var(--royal-purple);">
+                         <i class="fas fa-scroll" style="font-size: 40px; margin-bottom: 10px;"></i>
+                        <h3 style="font-family: 'Cinzel', serif;">Join the Court</h3>
+                    </div>
+                    <input type="text" id="regName" class="auth-input" placeholder="Full Name">
+                    <input type="email" id="regEmail" class="auth-input" placeholder="Email Address">
+                    <input type="password" id="regPassword" class="auth-input" placeholder="Choose Password">
+                     <button class="auth-btn" onclick="handleRegister()">Proclaim Membership</button>
+                    <div id="regError" class="error-msg"></div>
+                    <div class="switch-auth" onclick="document.getElementById('modalTitle').textContent='Royal Access Required'; renderLoginForm()">Already a member? Enter</div>
+                </div>
+            `;
+        }
+
+        async function handleLogin() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = '';
+
+            if (!email || !password) {
+                errorDiv.textContent = 'Please provide both email and password.';
+                return;
+            }
+
+            document.querySelector('.auth-btn').innerText = 'Verifying...';
+
+            try {
+                const res = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await res.json();
+
+                if (res.ok) {
+                    localStorage.setItem('token', data.token);
+                    currentUser = data.user; // Note: this user obj is minimal from login
+                    // Fetch full profile to be sure
+                    await checkLogin();
+                    closeProductModal();
+                    // alert(`Welcome back, ${currentUser.name}!`);
+                    // Open the profile automatically?
+                    showProfileModal('Account');
+                } else {
+                    errorDiv.textContent = data.message || 'Login failed.';
+                    document.querySelector('.auth-btn').innerText = 'Enter Palace';
+                }
+            } catch (e) {
+                errorDiv.textContent = 'Connection error. Is the Backend running?';
+                document.querySelector('.auth-btn').innerText = 'Enter Palace';
+                console.error(e);
+            }
+        }
+
+        async function handleRegister() {
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const errorDiv = document.getElementById('regError');
+            errorDiv.textContent = '';
+
+            if (!name || !email || !password) {
+                errorDiv.textContent = 'All fields are required.';
+                return;
+            }
+
+            document.querySelector('.auth-btn').innerText = 'Registering...';
+
+            try {
+                const res = await fetch(`${API_URL}/auth/register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+                const data = await res.json();
+
+                if (res.ok) {
+                    alert('Registration successful! Please login.');
+                    renderLoginForm();
+                } else {
+                    errorDiv.textContent = data.message || 'Registration failed.';
+                    document.querySelector('.auth-btn').innerText = 'Proclaim Membership';
+                }
+            } catch (e) {
+                errorDiv.textContent = 'Connection error.';
+                document.querySelector('.auth-btn').innerText = 'Proclaim Membership';
+            }
+        }
+
         // ============ INITIALIZATION ============
         document.addEventListener('DOMContentLoaded', function () {
+            checkLogin(); // Check auth on load
             // Add click events to skin type cards
             document.querySelectorAll('.category-card').forEach(card => {
                 card.addEventListener('click', function () {
@@ -4023,72 +4262,75 @@
 
                 modalTitle.textContent = title;
 
+                // CHECK LOGIN STATE
+                if (!currentUser) {
+                    modalTitle.textContent = "Royal Access Required";
+                    renderLoginForm();
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    return;
+                }
+
                 let content = '';
 
                 if (title === 'Account') {
                     content = `
                         <div style="text-align: center; padding: 30px;">
-                            <div style="width: 100px; height: 100px; background: #eee; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--royal-gold);">
+                            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--royal-gold), var(--soft-gold)); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--royal-purple); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                                 <i class="fas fa-crown"></i>
                             </div>
-                            <h3 style="color: var(--royal-purple); margin-bottom: 10px;">Queen Vindhya</h3>
-                            <p style="color: #666;">Royal Member since 2024</p>
-                            <div style="margin-top: 20px; text-align: left; background: #f9f9f9; padding: 20px; border-radius: 10px;">
-                                <p><strong>Email:</strong> vindhya@royal.com</p>
-                                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                                <p><strong>Address:</strong> The Palace, Skincare Kingdom</p>
+                            <h3 style="color: var(--royal-purple); margin-bottom: 10px; font-family: 'Cinzel', serif;">${currentUser ? currentUser.name : 'Guest'}</h3>
+                            <p style="color: #666;">Royal Member</p>
+                            <div style="margin-top: 30px; text-align: left; background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                                <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: var(--royal-gold);"></i> <strong>Email:</strong> ${currentUser ? currentUser.email : ''}</p>
+                                <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone" style="color: var(--royal-gold);"></i> <strong>Phone:</strong> ${currentUser && currentUser.phone ? currentUser.phone : 'Not provided'}</p>
+                                <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--royal-gold);"></i> <strong>Address:</strong> ${currentUser && currentUser.address ? currentUser.address : 'Not provided'}</p>
                             </div>
+                            <button onclick="logout()" class="cta-button" style="margin-top: 30px; background: #f8f8f8; color: #666; border: 1px solid #ddd; box-shadow: none;">Logout</button>
                         </div>
                     `;
                 } else if (title === 'Orders') {
                     content = `
                         <div style="padding: 20px;">
-                            <div style="border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; display: flex; gap: 20px; align-items: center;">
-                                <img src="images/ilunara_product.png" style="width: 80px; height: 80px; project-fit: cover; border-radius: 8px;">
-                                <div>
-                                    <h4 style="color: var(--royal-purple); margin-bottom: 5px;">Royal Serum Collection</h4>
-                                    <p style="color: #666; font-size: 14px;">Delivered on Dec 15, 2025</p>
-                                    <span style="display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 15px; font-size: 12px; margin-top: 5px;">Completed</span>
-                                </div>
-                                <div style="margin-left: auto; font-weight: bold; color: var(--royal-purple);">₹5,450</div>
+                            <div style="text-align: center; padding: 40px; color: #888;">
+                                <i class="fas fa-shopping-bag" style="font-size: 40px; margin-bottom: 15px; color: var(--royal-gold); opacity: 0.5;"></i>
+                                <p>You have no recent orders, Your Highness.</p>
+                                <button class="cta-button" onclick="closeProductModal(); document.querySelector('a[href=\\'#shop\\']').click();" style="margin-top: 20px;">Shop Royal Collection</button>
                             </div>
                         </div>
                     `;
                 } else if (title === 'Wishlist') {
-                    content = `
-                        <div style="padding: 20px; text-align: center;">
-                            <p style="margin-bottom: 20px;">Your saved royal treasures.</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-                                <div style="border: 1px solid #eee; padding: 15px; border-radius: 10px;">
-                                    <img src="images/ilunara_moisturizer.png" style="width: 100%; height: 120px; object-fit: cover; margin-bottom: 10px;">
-                                    <h5>Night Cream</h5>
-                                    <button class="cta-button" style="width: 100%; padding: 8px; font-size: 12px; margin-top: 10px;">Add to Cart</button>
+                    const wishlist = getWishlist();
+                    if (wishlist.length === 0) {
+                        content = `
+                            <div style="padding: 20px; text-align: center;">
+                                <p style="margin-bottom: 20px;">Your wishlist is empty, Your Highness.</p>
+                                <button class="cta-button" onclick="closeProductModal(); document.querySelector('a[href=\\'#shop\\']').click();">Explore Collection</button>
+                            </div>
+                        `;
+                    } else {
+                        content = `
+                            <div style="padding: 20px;">
+                                <p style="text-align: center; margin-bottom: 20px;">Your personal collection of desires.</p>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                                    ${wishlist.map(item => `
+                                        <div style="border: 1px solid #eee; padding: 15px; border-radius: 10px; position: relative;">
+                                            <button onclick="toggleWishlist(event, '${item.name.replace(/'/g, "\\'")}', '${item.price}', '${item.image.replace(/\\/g, '\\\\')}', '${item.type}')" style="position: absolute; top: 10px; right: 10px; background: white; border: 1px solid #eee; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; color: #e74c3c; cursor: pointer; z-index: 10;">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                            <div style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                                                <img src="${item.image}" style="width: 100%; height: 100%; object-fit: cover;" alt="${item.name}">
+                                            </div>
+                                            <h5 style="font-size: 14px; margin-bottom: 5px; height: 40px; overflow: hidden;">${item.name}</h5>
+                                            <p style="font-size: 12px; color: var(--royal-purple); font-weight: bold;">${item.price}</p>
+                                            <button class="cta-button" style="width: 100%; padding: 8px; font-size: 12px; margin-top: 10px;">Add to Bag</button>
+                                        </div>
+                                    `).join('')}
                                 </div>
-                                <div style="border: 1px solid #eee; padding: 15px; border-radius: 10px;">
-                                    <img src="images/ilunara_facewash.png" style="width: 100%; height: 120px; object-fit: cover; margin-bottom: 10px;">
-                                    <h5>Gentle Cleanser</h5>
-                                    <button class="cta-button" style="width: 100%; padding: 8px; font-size: 12px; margin-top: 10px;">Add to Cart</button>
-                                </div>
                             </div>
-                        </div>
-                    `;
-                } else if (title === 'Settings') {
-                    content = `
-                        <div style="padding: 20px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
-                                <span>Email Notifications</span>
-                                <i class="fas fa-toggle-on" style="color: var(--royal-gold); font-size: 24px;"></i>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
-                                <span>Dark Mode</span>
-                                <i class="fas fa-toggle-off" style="color: #ccc; font-size: 24px;"></i>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
-                                <span>Two-Factor Authentication</span>
-                                <i class="fas fa-toggle-on" style="color: var(--royal-gold); font-size: 24px;"></i>
-                            </div>
-                        </div>
-                    `;
+                        `;
+                    }
+
                 }
 
                 modalBody.innerHTML = content;
@@ -4151,7 +4393,72 @@
             hideAllSections();
             sections.hero.style.display = 'flex';
             sections.hero.classList.add('active');
+
+            // INJECT WISHLIST BUTTONS INTO STATIC CARDS
+            document.querySelectorAll('.product-card').forEach(card => {
+                const name = card.querySelector('h3').textContent;
+                const price = card.querySelector('p').textContent;
+                const imgElement = card.querySelector('img');
+                const img = imgElement ? imgElement.getAttribute('src') : 'images/ilunara_logo.png';
+                const type = card.querySelector('.description')?.textContent || 'Skincare';
+
+                const btn = document.createElement('button');
+                btn.className = 'wishlist-btn';
+
+                if (isWishlisted(name)) {
+                    btn.classList.add('active');
+                    btn.innerHTML = '<i class="fas fa-heart"></i>';
+                } else {
+                    btn.innerHTML = '<i class="far fa-heart"></i>';
+                }
+
+                btn.onclick = (e) => toggleWishlist(e, name, price, img, type);
+
+                card.style.position = 'relative';
+                // wrapper for image might mask absolute position, ensure it's on top
+                card.appendChild(btn);
+            });
         });
+
+
+        // ============ WISHLIST LOGIC ============
+        function getWishlist() {
+            return JSON.parse(localStorage.getItem('ilunara_wishlist')) || [];
+        }
+
+        function isWishlisted(productName) {
+            const wishlist = getWishlist();
+            return wishlist.some(item => item.name === productName);
+        }
+
+        function toggleWishlist(e, name, price, image, type) {
+            e.stopPropagation(); // Prevent card click
+            if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) return;
+
+            const btn = e.currentTarget;
+            let wishlist = getWishlist();
+            const index = wishlist.findIndex(item => item.name === name);
+
+            if (index > -1) {
+                // Remove
+                wishlist.splice(index, 1);
+                btn.classList.remove('active');
+                btn.querySelector('i').className = 'far fa-heart';
+            } else {
+                // Add
+                wishlist.push({ name, price, image, type });
+                btn.classList.add('active');
+                btn.querySelector('i').className = 'fas fa-heart';
+            }
+
+            localStorage.setItem('ilunara_wishlist', JSON.stringify(wishlist));
+
+            // If we are in the profile wishlist view, re-render it
+            const modalTitle = document.getElementById('modalTitle');
+            if (modalTitle && modalTitle.textContent === 'Wishlist') {
+                showProfileModal('Wishlist');
+            }
+        }
     </script>
 </body>
 
